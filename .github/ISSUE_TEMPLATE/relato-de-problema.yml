@@ -1,0 +1,78 @@
+name: Relato de problema
+description: Algo não funciona como deveria no site, no app, na API ou no modelo.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar! Antes, procure nas issues se o problema já apareceu.
+
+        **Vulnerabilidade de segurança não vira issue:** siga a [política de segurança](https://github.com/coffea-arabica-ml/.github/blob/main/SECURITY.md).
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Onde o problema aparece?
+      options:
+        - Site (coffea-web)
+        - App Android (coffea-mobile)
+        - API e servidor (coffea-backend)
+        - Modelo e dados (coffea-ml)
+        - Não sei
+    validations:
+      required: true
+  - type: dropdown
+    id: forma-de-uso
+    attributes:
+      label: Como você usou o Cafélens?
+      options:
+        - Site (coffea-web.vercel.app)
+        - APK de apresentação (v1.0.0)
+        - APK de demonstração (v1.0.0)
+        - Código rodando na minha máquina
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: o-que-aconteceu
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema. Se apareceu uma mensagem de erro, copie o texto.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que você esperava?
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      description: O passo a passo para o problema aparecer de novo.
+      placeholder: |
+        1. Abra ...
+        2. Toque em ...
+        3. Veja ...
+    validations:
+      required: true
+  - type: textarea
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Aparelho e versão do Android, navegador, sistema operacional ou commit, o que se aplicar.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        **Diagnóstico que parece errado** também pode ser relatado. O modelo da `v1.0.0` está congelado: o relato fica registrado, mas não muda parâmetro nem limiar.
+  - type: checkboxes
+    id: confirmacoes
+    attributes:
+      label: Confirmações
+      options:
+        - label: Não é uma vulnerabilidade de segurança.
+          required: true
+        - label: Não incluí senha, chave, token, conteúdo de `.env` nem dados pessoais.
+          required: true

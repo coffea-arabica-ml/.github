@@ -1,0 +1,48 @@
+name: Sugestão de melhoria
+description: Uma ideia para melhorar o site, o app, a API, o modelo ou a documentação.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado pela sugestão! Antes, procure nas issues se a ideia já apareceu.
+
+        A `v1.0.0` é a versão acadêmica: o modelo está congelado (nenhum parâmetro nem limiar muda), e os conjuntos de teste fechados não podem ser usados. Detalhes no [guia de contribuição](https://github.com/coffea-arabica-ml/.github/blob/main/CONTRIBUTING.md).
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Onde entra a melhoria?
+      options:
+        - Site (coffea-web)
+        - App Android (coffea-mobile)
+        - API e servidor (coffea-backend)
+        - Modelo e dados (coffea-ml)
+        - Documentação
+        - Não sei
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Que problema a sugestão resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: O que você propõe?
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas que você considerou
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmacoes
+    attributes:
+      label: Confirmações
+      options:
+        - label: Li as regras da versão acadêmica no guia de contribuição.
+          required: true
